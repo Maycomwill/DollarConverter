@@ -42,7 +42,7 @@ Uma plataforma simples para realizar a conversão de dólar para qualquer moeda,
 </br>
 
 
-[Acesse o projeto online](https://today-currency.vercel.app/)
+[Acesse o projeto online](https://todaycurrency.vercel.app/)
 ## 📝 License
 
 Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
