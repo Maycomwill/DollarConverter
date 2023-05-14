@@ -20,7 +20,7 @@ function App() {
   const [outputValue, setOutputValue] = useState<number>(0);
   const [currencyConverter, setCurrencyConverter] = useState<number>();
 
-  function handleConvert(e: any, converterFactor: number | undefined) {
+  function handleConvert(e: React.FormEvent<HTMLFormElement>, converterFactor: number | undefined) {
     e.preventDefault();
     console.log("factor: ", converterFactor);
     console.log("input: ", inputValue);
