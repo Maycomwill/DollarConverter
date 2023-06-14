@@ -35,7 +35,7 @@ function App() {
   // console.log("Currency: ", currencyConverter);
   return (
     <>
-      <div className="w-screen h-screen flex flex-col bg-svg bg-center bg-cover bg-[#fafafa] dark:bg-[#121214] items-center justify-start p-4 antialiased leading-relaxed text-gray-900 dark:text-gray-100">
+      <div className="w-full h-screen flex flex-col bg-svg bg-center bg-cover bg-[#fafafa] dark:bg-[#121214] items-center justify-start p-4 antialiased leading-relaxed text-gray-900 dark:text-gray-100">
         <div className="font-bold text-2xl mt-12 flex gap-2 cursor-default">
           <span className="relative font-ubuntu bg-gradient-to-r from-green-500 to-green-600 text-transparent bg-clip-text">
             Dollar
@@ -43,7 +43,7 @@ function App() {
           </span>
           <h1>Exchange</h1>
         </div>
-        <section className="mt-2 w-full flex flex-col justify-center items-center p-2 ">
+        <section className="mt-12 w-full flex flex-col justify-center items-center p-2">
           <form
             className="flex flex-col gap-8 items-center"
             onSubmit={(e) => {
@@ -51,7 +51,7 @@ function App() {
             }}
           >
             <select
-              className="max-w-[20%] bg-green-50 text-gray-900 outline-none w-[25%] py-2 px-1 rounded-md"
+              className="w-[50%] md:max-w-[20%] bg-green-50 text-gray-900 outline-none py-2 px-1 rounded-md"
               name="currencies"
               id="currenySelect"
               placeholder="Select the currency"
@@ -72,8 +72,8 @@ function App() {
                 })}
               </optgroup>
             </select>
-            <div className="flex w-full gap-16">
-              <div className="flex gap-2 items-center justify-between ">
+            <div className="flex flex-col md:flex-row w-full md:gap-16">
+              <div className="flex flex-col md:flex-row gap-2 items-center justify-between ">
                 <label htmlFor="entry" className="font-semibold">
                   Entry
                 </label>
@@ -87,19 +87,19 @@ function App() {
                   className="p-2 rounded-md bg-green-50 text-gray-800 border border-[#00000000] focus-within:outline-none focus-within:border focus-within:border-green-500 h-11 w-48"
                 />
               </div>
-              <div>
-                <span className="text-5xl font-bold antialiased bg-gradient-to-r from-green-500 to-green-600 text-transparent bg-clip-text">
+              <div className="w-full text-center">
+                <span className=" text-5xl font-bold antialiased bg-gradient-to-r from-green-500 to-green-600 text-transparent bg-clip-text">
                   =
                 </span>
               </div>
-              <div className="flex gap-2 items-center justify-between ">
+              <div className="flex flex-col md:flex-row gap-2 items-center justify-between ">
                 <label className="font-semibold">Output</label>
                 <div className="p-2 rounded-md bg-green-50 text-gray-800 border border-[#00000000] focus-within:outline-none focus-within:border focus-within:border-fuchsia-300 w-48 h-11">
                   <span>{outputValue == 0 ? null : outputValue}</span>
                 </div>
               </div>
             </div>
-            <div className="">
+            <div>
               <button
                 className="bg-gray-300 text-gray-900 font-bold hover:bg-green-400 transition-colors duration-150 drop-shadow-lg py-4 px-8 rounded-lg"
                 type="submit"
